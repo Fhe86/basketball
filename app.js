@@ -39,19 +39,13 @@
     });
   });
 
-  /* Notenrechner */
+  /* Notenrechner: drei Noten, jede einzeln aus ihren Punkten */
   var form = document.getElementById("rechner");
   if (form) {
-    var MAX = { dribbeln: 8, passen: 8, werfen: 8, spiel: 12 };
-    var TOTAL = 36;
-    var out = {
-      note: document.getElementById("r-note"),
-      sum: document.getElementById("r-sum"),
-      pct: document.getElementById("r-pct")
-    };
+    var MAX = { dribbeln: 10, werfen: 10, spiel: 12 };
     /* Schluessel aus Fabis Standard: ab 90/80/60/40/20 Prozent gleich Note 1 bis 5 */
-    function noteFor(points) {
-      var p = points / TOTAL;
+    function noteFor(points, max) {
+      var p = Math.round(points / max * 1e6) / 1e6;
       if (p >= 0.9) return 1;
       if (p >= 0.8) return 2;
       if (p >= 0.6) return 3;
@@ -60,30 +54,26 @@
       return 6;
     }
     function update() {
-      var sum = 0, filled = 0, bad = false;
       Object.keys(MAX).forEach(function (k) {
         var input = form.elements[k];
         var err = document.getElementById("e-" + k);
+        var note = document.getElementById("r-" + k);
+        var info = document.getElementById("p-" + k);
         var raw = input.value.trim();
         err.textContent = "";
         input.removeAttribute("aria-invalid");
+        note.textContent = "-";
+        info.textContent = "";
         if (raw === "") return;
         var v = Number(raw.replace(",", "."));
         if (isNaN(v) || v < 0 || v > MAX[k]) {
           err.textContent = "Bitte 0 bis " + MAX[k] + " eingeben.";
           input.setAttribute("aria-invalid", "true");
-          bad = true;
           return;
         }
-        sum += v; filled++;
+        note.textContent = String(noteFor(v, MAX[k]));
+        info.textContent = v + " von " + MAX[k] + " Punkten";
       });
-      if (bad || filled === 0) {
-        out.note.textContent = "-"; out.sum.textContent = "0 von " + TOTAL + " Punkten"; out.pct.textContent = "";
-        return;
-      }
-      out.sum.textContent = sum + " von " + TOTAL + " Punkten";
-      out.pct.textContent = Math.round(sum / TOTAL * 100) + " Prozent" + (filled < 4 ? " (noch nicht alle Teile eingetragen)" : "");
-      out.note.textContent = filled < 4 ? "-" : String(noteFor(sum));
     }
     form.addEventListener("input", update);
     form.addEventListener("submit", function (e) { e.preventDefault(); });

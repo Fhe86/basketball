@@ -135,7 +135,7 @@ h2.title{font-size:clamp(1.9rem,3.6vw,2.8rem)}
 .tile .big small{font-size:1rem;font-weight:500;color:var(--ink-soft);letter-spacing:0;margin-left:6px}
 .tile p{color:var(--ink-soft);font-size:.95rem}
 .tile.t1{grid-column:span 3}.tile.t2{grid-column:span 3;background:var(--surface-2)}
-.tile.t3{grid-column:span 2}.tile.t4{grid-column:span 4;background:var(--accent);border-color:var(--accent);color:var(--accent-ink)}
+.tile.t4{grid-column:span 6;background:var(--accent);border-color:var(--accent);color:var(--accent-ink)}
 .tile.t4 p,.tile.t4 .big small{color:inherit;opacity:.85}
 
 /* Zweispalter Material */
@@ -182,19 +182,19 @@ h2.title{font-size:clamp(1.9rem,3.6vw,2.8rem)}
 .pager .next{margin-left:auto;text-align:right}
 
 /* Bewertungsseite */
-.calc{margin-top:32px;display:grid;grid-template-columns:1.1fr .9fr;gap:20px;align-items:stretch}
-.calc form{background:var(--surface);border:1px solid var(--line);border-radius:var(--r-card);padding:24px;display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.calc{margin-top:32px;display:grid;grid-template-columns:1.2fr .8fr;gap:20px;align-items:stretch}
+.calc form{background:var(--surface);border:1px solid var(--line);border-radius:var(--r-card);padding:24px;display:grid;grid-template-columns:1fr 1fr 1fr;gap:18px;align-content:start}
 .field label{display:block;font-weight:600;font-size:.95rem;margin-bottom:6px}
 .field .hint{display:block;font-size:.82rem;color:var(--ink-soft);margin-top:5px}
 .field input{width:100%;font:inherit;font-size:1.1rem;padding:11px 14px;border-radius:var(--r-ctl);border:1.5px solid var(--line);background:var(--bg);color:var(--ink)}
 .field input:focus{outline:none;border-color:var(--accent);box-shadow:0 0 0 3px var(--accent-soft)}
 .field input[aria-invalid="true"]{border-color:var(--warn)}
 .field .err{display:block;min-height:1.1em;font-size:.82rem;color:var(--warn);margin-top:5px}
-.result{background:var(--ink);color:var(--bg);border-radius:var(--r-card);padding:28px;display:flex;flex-direction:column;justify-content:space-between;gap:16px}
-.result .note{font-size:5.5rem;font-weight:700;letter-spacing:-.05em;line-height:1}
-.result .lbl{opacity:.7;font-size:.95rem}
-.result .sum{font-size:1.15rem;font-weight:600}
+.result{background:var(--ink);color:var(--bg);border-radius:var(--r-card);padding:28px;display:grid;grid-template-columns:repeat(3,1fr);gap:16px;align-items:start}
+.result .note{font-size:4.6rem;font-weight:700;letter-spacing:-.05em;line-height:1;margin:6px 0}
+.result .lbl{opacity:.75;font-size:.9rem}
 .scales{margin-top:40px;display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.scales + .panel table td:not(:first-child){color:var(--ink)}
 .panel table{border-collapse:collapse;width:100%;font-size:.95rem}
 .panel th{text-align:left;font-size:.78rem;text-transform:uppercase;letter-spacing:.04em;color:var(--ink-soft);padding:4px 0 8px;border-bottom:1.5px solid var(--ink)}
 .panel td{padding:6px 0;color:var(--ink-soft)}
@@ -231,6 +231,8 @@ footer.foot .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:
   .lesson-row .n{font-size:2.4rem}
   .two,.aside-grid,.scales,.calc{grid-template-columns:1fr}
   .calc form{grid-template-columns:1fr}
+  .result{grid-template-columns:repeat(3,1fr);padding:20px}
+  .result .note{font-size:3.2rem}
   .score-grid{grid-template-columns:1fr}
   .tile.t1,.tile.t2,.tile.t3,.tile.t4{grid-column:auto}
   .tl-step{grid-template-columns:1fr;gap:8px}

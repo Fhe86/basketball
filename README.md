@@ -2,7 +2,7 @@
 
 Stand: 06.10.2026, lokal fertig, noch nicht veröffentlicht, noch nicht im Unterricht getestet.
 
-Vier Doppelstunden (je 90 Min, 12 Schüler) vom Parteiball zum 3 gegen 3, dazu Übungspool und Bewertung (36 Punkte, Notenrechner, Bewertungsbogen). Lehrplanbezug: LehrplanPLUS Mittelschule Sport Jgst. 6, 4.3 Spielen sowie Lernbereich 1 und 2.
+Vier Doppelstunden (je 90 Min, 12 Schüler) vom Parteiball zum 3 gegen 3, dazu Übungspool und drei Noten (Dribbeln 10 P, Werfen 10 P, Spiel 12 P, Notenrechner, Bewertungsbogen). Lehrplanbezug: LehrplanPLUS Mittelschule Sport Jgst. 6, 4.3 Spielen sowie Lernbereich 1 und 2.
 
 ## Dateien
 

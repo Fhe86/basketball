@@ -136,32 +136,32 @@ LESSONS = [
     },
     {
         "n": 4,
-        "title": "Technikparcours und Turnier",
+        "title": "Dribbeln, Werfen und Turnier",
         "short": "Bewertung und Turnier",
-        "goal": "Die Jungs zeigen Dribbeln, Passen, Werfen und Spielen. Du bewertest.",
+        "goal": "Die Jungs zeigen Dribbeln, Werfen und Spielen. Du vergibst drei Noten.",
         "spiel": "3-gegen-3-Turnier",
         "halle": "oben",
         "lehrplan": "Lehrplan 4.3 Spielen, Lernbereich 2 (Fairness, Schiedsrichter)",
-        "material": ["Bewertungsbogen (Seite Bewertung, ausdrucken)", "Stoppuhr", "Hütchen für den Dribbelparcours", "Wand oder Passmarkierung für den Passtest", "Klemmbrett, Pfeife, Leibchen"],
+        "material": ["Bewertungsbogen (Seite Bewertung, ausdrucken)", "Stoppuhr", "Hütchen für den Dribbelparcours", "Klemmbrett, Pfeife, Leibchen"],
         "safety": ["Beim Turnier nicht zu hart spielen lassen, Fouls konsequent pfeifen.", "Jeder Schüler, der gerade nicht dran ist, passt auf und zählt für einen Mitschüler."],
         "steps": [
             ("0 bis 10", "Aufwärmen mit Ball",
              ["Dribbel-Fangen als Einstieg, dann ein Durchgang Passen im Dreieck.",
-              "Kurze Ansage: Heute gibt es vier Teile, alle zählen. Wer nicht an der Reihe ist, zählt für seinen Partner."], None),
-            ("10 bis 45", "Technikparcours (bewertet)",
-             ["**Station A, Dribbelparcours** (du wertest): 5 Hütchen im Slalom hin mit der starken Hand, zurück mit der schwachen. Zeit und Technik zählen.",
-              "**Station B, Passtest** (Partner zählt): Brustpässe an die Wand aus 3 m in 30 Sekunden, nur Pässe ins Zielfeld zählen.",
-              "**Station C, Korbwurf** (Partner zählt): 5 Würfe aus der Nähe, 3 Würfe aus mittlerer Entfernung.",
-              "Wer nicht an Station A dran ist, wechselt zwischen B und C. Zeitbedarf Station A: ca. 1,5 Minuten pro Schüler."],
+              "Kurze Ansage: Heute gibt es drei Noten, Dribbeln, Werfen und Spiel. Wer nicht an der Reihe ist, zählt für seinen Partner."], None),
+            ("10 bis 45", "Dribbel- und Wurftest (zwei Noten)",
+             ["**Station A, Dribbelparcours** (du wertest): 5 Hütchen im Slalom hin mit der starken Hand, zurück mit der schwachen. Zeit (6 Punkte) und Technik (4 Punkte) zählen.",
+              "**Station B, Korbwurf** (Partner zählt): 6 Würfe aus der Nähe, 4 Würfe aus mittlerer Entfernung, ein Punkt pro Treffer.",
+              "Wer nicht an Station A oder B dran ist, übt freies Passen an der Wand oder Basketball-Golf. Das zählt nicht.",
+              "Zeitbedarf Station A: ca. 1,5 Minuten pro Schüler, also etwa 18 Minuten für alle."],
              "Eintragen sofort nach jedem Versuch, sonst vergisst du die Werte."),
-            ("45 bis 80", "3-gegen-3-Turnier (bewertet)",
+            ("45 bis 80", "3-gegen-3-Turnier (Spielnote)",
              ["Vier Teams, zwei Felder, ca. 6 Minuten pro Spiel. Jedes Team spielt gegen jedes.",
               "Du beobachtest vier Kriterien (jeweils 0 bis 3 Punkte): **Freilaufen und Anbieten**, **Passen und Dribbeln**, **Regeln und Fairness**, **Einsatz und Entscheidungen**.",
               "Das Team ohne Spiel pfeift (Schiedsrichter) und notiert den Spielstand."],
              "Bei der Beobachtung: lieber jede Runde zwei Spieler gezielt anschauen, als alle halb zu sehen."),
             ("80 bis 90", "Abschluss und Rückmeldung",
              ["Kurze Siegerehrung fürs Turnier, jeder bekommt einen persönlichen Satz zu seinem besten Teil.",
-              "Ergebnisse mit dem **Notenrechner** auf der Seite Bewertung auswerten."], None),
+              "Ergebnisse mit dem **Notenrechner** auf der Seite Bewertung in drei Noten umrechnen."], None),
         ],
     },
 ]
@@ -200,22 +200,30 @@ POOL = [
 ]
 
 # Bewertung: Punkte, Richtwerte
-TOTAL = 36
 TEILE = [
-    ("Dribbeln", 8, "Zeit im Slalom (0 bis 5 Punkte) und Technik (0 bis 3 Punkte): Blick hoch, Fingerkuppen, schwache Hand."),
-    ("Passen", 8, "Gültige Brustpässe an die Wand in 30 Sekunden (0 bis 6 Punkte) und Technik (0 bis 2 Punkte)."),
-    ("Werfen", 8, "5 Würfe aus der Nähe und 3 aus mittlerer Entfernung, je 1 Punkt pro Treffer."),
-    ("Spiel", 12, "Vier Kriterien im 3-gegen-3-Turnier, je 0 bis 3 Punkte."),
+    ("dribbeln", "Dribbeln", 10, "Zeit im Slalom (0 bis 6 Punkte) und Technik (0 bis 4 Punkte): Blick hoch, Fingerkuppen, schwache Hand, Ballkontrolle."),
+    ("werfen", "Werfen", 10, "6 Würfe aus der Nähe und 4 aus mittlerer Entfernung, je 1 Punkt pro Treffer."),
+    ("spiel", "Spiel", 12, "Vier Kriterien im 3-gegen-3-Turnier, je 0 bis 3 Punkte. Das Passen fließt hier ein."),
 ]
-DRIBBEL_ZEIT = [("bis 17 s", "5 Punkte"), ("bis 20 s", "4 Punkte"), ("bis 23 s", "3 Punkte"), ("bis 27 s", "2 Punkte"), ("langsamer, aber fertig", "1 Punkt")]
-PASS_ZAHL = [("22 oder mehr", "6 Punkte"), ("19 bis 21", "5 Punkte"), ("16 bis 18", "4 Punkte"), ("13 bis 15", "3 Punkte"), ("10 bis 12", "2 Punkte"), ("7 bis 9", "1 Punkt")]
+DRIBBEL_ZEIT = [("bis 17 s", "6 Punkte"), ("bis 19 s", "5 Punkte"), ("bis 21 s", "4 Punkte"), ("bis 24 s", "3 Punkte"), ("bis 27 s", "2 Punkte"), ("langsamer, aber fertig", "1 Punkt")]
+DRIBBEL_TECHNIK = [
+    ("Blick oben", "1 Punkt, wenn der Blick überwiegend hochgeht"),
+    ("Fingerkuppen", "1 Punkt, wenn der Ball nicht flach in der Hand liegt"),
+    ("Schwache Hand", "1 Punkt, wenn der Rückweg sicher gelingt"),
+    ("Ballkontrolle", "1 Punkt, wenn der Ball nie wegspringt"),
+]
 SPIEL_KRITERIEN = [
     ("Freilaufen und Anbieten", "3 = fast immer anspielbar, 0 = bleibt stehen"),
     ("Passen und Dribbeln", "3 = sicher und sinnvoll, 0 = verliert den Ball oft"),
     ("Regeln und Fairness", "3 = hält Regeln ein und akzeptiert Entscheidungen"),
     ("Einsatz und Entscheidungen", "3 = engagiert, spielt zum freien Mitspieler"),
 ]
-SCHLUESSEL = [("Note 1", "ab 33 Punkten"), ("Note 2", "ab 29 Punkten"), ("Note 3", "ab 22 Punkten"), ("Note 4", "ab 15 Punkten"), ("Note 5", "ab 8 Punkten"), ("Note 6", "darunter")]
+
+
+def schluessel(maximum):
+    """Mindestpunkte fuer Note 1 bis 5 nach Fabis Standard (90/80/60/40/20 Prozent)."""
+    import math
+    return [math.ceil(round(p * maximum, 6)) for p in (0.9, 0.8, 0.6, 0.4, 0.2)]
 
 
 # ---------------------------------------------------------------- Helfer
@@ -303,10 +311,10 @@ def page_index():
 <div class="tags"><span class="tag">{esc(dauer)}</span><span class="tag">{halle_tag}</span></div>
 </article>""")
 
-    tile_cls = ["t1", "t2", "t3", "t4"]
+    tile_cls = ["t1", "t2", "t4"]
     tiles = []
-    for cls, (name, pts, text) in zip(tile_cls, TEILE):
-        tiles.append(f'<div class="tile {cls} reveal"><span class="big">{pts}<small>Punkte</small></span><h3>{esc(name)}</h3><p>{esc(text)}</p></div>')
+    for cls, (key, name, pts, text) in zip(tile_cls, TEILE):
+        tiles.append(f'<div class="tile {cls} reveal"><span class="big">{pts}<small>Punkte</small></span><h3>Note {esc(name)}</h3><p>{esc(text)}</p></div>')
 
     body = head("Basketball Klasse 6, Unterrichtssequenz",
                 "Vier Doppelstunden Basketball für die 6. Klasse: Stundenverläufe, Übungspool und Bewertung.") + nav("index")
@@ -335,8 +343,8 @@ def page_index():
 </div></section>
 
 <section class="block" id="bewertung"><div class="wrap">
-<h2 class="title reveal">Eine Note, vier Teile</h2>
-<p class="sub reveal">{TOTAL} Punkte aus Technikparcours und Turnier. Der Notenschlüssel folgt deinem Standard: ab 90, 80, 60, 40 und 20 Prozent gibt es die Noten 1 bis 5.</p>
+<h2 class="title reveal">Drei Noten für Basketball</h2>
+<p class="sub reveal">Dribbeln und Werfen sind je eine Technikprobe, dazu kommt die Spielnote aus dem Turnier. Der Schlüssel folgt deinem Standard: ab 90, 80, 60, 40 und 20 Prozent gibt es die Noten 1 bis 5.</p>
 <div class="score-grid">{''.join(tiles)}</div>
 <div class="page-actions"><a class="btn btn-primary" href="bewertung.html">Notenrechner und Bogen</a></div>
 </div></section>
@@ -406,14 +414,20 @@ def page_lesson(l):
 
 def page_bewertung():
     dr = "".join(f"<tr><td>{a}</td><td>{b}</td></tr>" for a, b in DRIBBEL_ZEIT)
-    pr = "".join(f"<tr><td>{a}</td><td>{b}</td></tr>" for a, b in PASS_ZAHL)
+    dt = "".join(f"<tr><td>{esc(a)}</td><td>{esc(b)}</td></tr>" for a, b in DRIBBEL_TECHNIK)
     sk = "".join(f"<tr><td>{esc(a)}</td><td>{esc(b)}</td></tr>" for a, b in SPIEL_KRITERIEN)
-    schl = "".join(f'<span class="tag">{esc(a)}: {esc(b)}</span>' for a, b in SCHLUESSEL)
 
-    fields = [("dribbeln", "Dribbeln", 8), ("passen", "Passen", 8), ("werfen", "Werfen", 8), ("spiel", "Spiel", 12)]
-    ff = "".join(f"""<div class="field"><label for="f-{k}">{n}</label>
+    ff = "".join(f"""<div class="field"><label for="f-{k}">Punkte {n}</label>
 <input id="f-{k}" name="{k}" type="text" inputmode="decimal" autocomplete="off">
-<span class="hint">0 bis {m} Punkte</span><span class="err" id="e-{k}" role="alert"></span></div>""" for k, n, m in fields)
+<span class="hint">0 bis {m} Punkte</span><span class="err" id="e-{k}" role="alert"></span></div>""" for k, n, m, _ in TEILE)
+
+    res = "".join(f"""<div class="res-col"><div class="lbl">{n}</div><div class="note" id="r-{k}" aria-live="polite">-</div><div class="lbl" id="p-{k}"></div></div>""" for k, n, m, _ in TEILE)
+
+    sch_rows = ""
+    for i in range(5):
+        cells = "".join(f"<td>ab {schluessel(m)[i]}</td>" for _, _, m, _ in TEILE)
+        sch_rows += f"<tr><td>Note {i + 1}</td>{cells}</tr>"
+    sch_head = "".join(f"<th>{n} /{m}</th>" for _, n, m, _ in TEILE)
 
     rows = "".join(f'<tr><td class="n">{i}</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>' for i in range(1, 13))
 
@@ -421,33 +435,32 @@ def page_bewertung():
     body += f"""<main><div class="wrap">
 <div class="page-head">
 <div class="crumb"><a href="index.html">Basketball Klasse 6</a> &nbsp;/&nbsp; Bewertung</div>
-<h1>Bewertung in vier Teilen</h1>
-<p class="goal">{TOTAL} Punkte. Dribbeln, Passen und Werfen aus dem Technikparcours, dazu die Spielfähigkeit im Turnier.</p>
+<h1>Drei Noten für Basketball</h1>
+<p class="goal">Dribbeln und Werfen als Technikproben, dazu eine Spielnote aus dem 3-gegen-3-Turnier. Jede Note wird einzeln berechnet.</p>
 </div>
 
 <div class="calc no-print">
 <form id="rechner" novalidate aria-label="Notenrechner">{ff}</form>
-<div class="result"><div><div class="lbl">Note</div><div class="note" id="r-note" aria-live="polite">-</div></div>
-<div><div class="sum" id="r-sum">0 von {TOTAL} Punkten</div><div class="lbl" id="r-pct"></div></div></div>
+<div class="result">{res}</div>
 </div>
-<div class="schluessel">{schl}</div>
 
 <div class="scales">
-<div class="panel"><h3>Dribbeln, Zeit im Slalom</h3><table><tr><th>Zeit</th><th>Punkte</th></tr>{dr}</table>
-<p>Dazu Technik 0 bis 3: Blick hoch, Fingerkuppen, schwache Hand sicher.</p></div>
-<div class="panel"><h3>Passen, Treffer in 30 Sekunden</h3><table><tr><th>Pässe</th><th>Punkte</th></tr>{pr}</table>
-<p>Dazu Technik 0 bis 2: Schritt, gestreckte Arme, Daumen nach unten.</p></div>
-<div class="panel"><h3>Werfen</h3><p>5 Würfe aus der Nähe und 3 aus mittlerer Entfernung. Ein Punkt pro Treffer, insgesamt 8 Punkte.</p>
+<div class="panel"><h3>Dribbeln: Zeit im Slalom</h3><table><tr><th>Zeit</th><th>Punkte</th></tr>{dr}</table></div>
+<div class="panel"><h3>Dribbeln: Technik, 4 Punkte</h3><table><tr><th>Merkmal</th><th>Maßstab</th></tr>{dt}</table></div>
+<div class="panel"><h3>Werfen</h3><p>6 Würfe aus der Nähe und 4 aus mittlerer Entfernung. Ein Punkt pro Treffer, insgesamt 10 Punkte.</p>
 <p>Der Korbleger ist freiwillig und gibt keine Zusatzpunkte.</p></div>
-<div class="panel"><h3>Spiel, vier Kriterien</h3><table><tr><th>Kriterium</th><th>Maßstab</th></tr>{sk}</table></div>
+<div class="panel"><h3>Spiel: vier Kriterien</h3><table><tr><th>Kriterium</th><th>Maßstab</th></tr>{sk}</table></div>
 </div>
+
+<div class="panel" style="margin-top:16px"><h3>Notenschlüssel (90, 80, 60, 40, 20 Prozent)</h3>
+<table><tr><th>Note</th>{sch_head}</tr>{sch_rows}<tr><td>Note 6</td><td>darunter</td><td>darunter</td><td>darunter</td></tr></table></div>
 <p class="sub">Die Richtwerte sind ein Vorschlag, keine amtliche Tabelle. Nach dem ersten Durchlauf mit der Klasse justieren, falls fast alle am selben Ende landen.</p>
 
 <div class="bogen-section">
 <h2 class="title" style="margin-top:56px">Bewertungsbogen zum Ausdrucken</h2>
 <div class="page-actions no-print"><button class="btn btn-primary" onclick="window.print()">Als PDF herunterladen</button></div>
 <div class="sheet-wrap"><table class="bogen" aria-label="Bewertungsbogen">
-<tr><th>#</th><th>Name</th><th>Slalom (s)</th><th>Dribbeln /8</th><th>Passen /8</th><th>Werfen /8</th><th>Spiel /12</th><th>Summe /{TOTAL}</th><th>Note</th></tr>{rows}</table></div>
+<tr><th>#</th><th>Name</th><th>Slalom (s)</th><th>Dribbeln /10</th><th>Note</th><th>Werfen /10</th><th>Note</th><th>Spiel /12</th><th>Note</th></tr>{rows}</table></div>
 </div>
 </div></main>
 """ + foot()
