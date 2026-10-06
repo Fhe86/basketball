@@ -1,6 +1,6 @@
 # Basketball Klasse 6 (Sequenz-Homepage)
 
-Stand: 06.10.2026, lokal fertig, noch nicht veröffentlicht, noch nicht im Unterricht getestet.
+Stand: 06.10.2026, live auf https://fhe86.github.io/basketball/ (Repo Fhe86/basketball), noch nicht im Unterricht getestet.
 
 Vier Doppelstunden (je 90 Min, 12 Schüler) vom Parteiball zum 3 gegen 3, dazu Übungspool und drei Noten (Dribbeln 10 P, Werfen 10 P, Spiel 12 P, Notenrechner, Bewertungsbogen). Lehrplanbezug: LehrplanPLUS Mittelschule Sport Jgst. 6, 4.3 Spielen sowie Lernbereich 1 und 2.
 
@@ -22,7 +22,7 @@ Vorlage als Look: 21st.dev "Forma Pilates Studio" (Kursplan, Karten, Filter), nu
 
 ## Offene Punkte
 
-- Veröffentlichung als Mini-Repo `Fhe86/basketball`, GitHub Pages (wartet auf Fabis Freigabe der Optik).
+- Änderungen: build.py ausführen, dann `git add -A && git commit && git push` im Ordner.
 - Punkte-Richtwerte (Slalom-Zeiten, Passzahlen) nach dem ersten Durchlauf mit der Klasse anpassen.
 - Bälle im Keller: nur sinnvoll, wenn dort Basketbälle liegen.
 - Keine Fotos oder Illustrationen: Bildgenerierung wäre kostenpflichtig und nicht freigegeben.
